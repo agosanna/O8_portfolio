@@ -1,0 +1,319 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Basic Commercial';
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a {
+    cursor: pointer;
+}
+
+/* a:hover {
+    color: red;
+} */
+
+/* img:hover {
+    mix-blend-mode: difference;
+} */
+
+#loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: #fff;
+    z-index: 0;
+  }
+  
+  #loading-image {
+    z-index: 100;
+  }
+
+#container img:hover {
+    opacity: 70%;
+    transition: 0.3s;
+}
+
+#container img:not(:hover){
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+
+header {
+    width: 98vw;
+    height: 5vh;
+    margin: 0 0.75vw;
+    position: fixed;
+    font-size: 24px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+
+footer {
+    width: 98vw;
+    height: 5vh;
+    margin: 0 0.75vw;
+    position: fixed;
+    font-size: 24px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+
+.menu-sx{
+    display: flex;
+    padding-right: 15px;
+    align-items: center;
+}
+
+.menu-sx a {
+    padding-left: 10px;
+}
+
+.menu-dx-container{
+    display: flex;
+}
+
+.menu-dx{
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+}
+
+.menu-dx a {
+    padding-right: 10px;
+}
+
+#dot {
+    width: 20px;
+    mix-blend-mode: difference;
+    padding-bottom: 1px;
+}
+
+#container {
+    /* width: 100vw;
+    margin: 5vh 0; */
+    width: 90vw;
+    margin: 5vh 5vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+body::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar width */
+    background: transparent;  /* Set scrollbar background color */
+}
+
+#container img{
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5vh;
+}
+
+.images-column{
+    height: 100%;
+    /* width: 11vw;
+    margin: 0 0.75vw; */
+    width: 7vw;
+    margin: 0 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.images-column img {
+    object-fit: contain;
+}
+
+#focus{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 70vh;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    z-index: -1;
+
+}
+
+#focus img{
+    height: 100%;
+    cursor: pointer;
+}
+
+#imageNumber {
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    margin-right: 1.1vw;
+    font-size: 18px;
+    mix-blend-mode: difference;
+    color: white;
+}
+
+#list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0.75vw;
+    z-index: 1;
+    padding-top: 49vh;
+}
+
+#list a {
+    font-size: 18px;
+    height: 30px;
+    color: black;
+    /* opacity: 0.5; */
+}
+
+/* Tablet Media Query */
+@media only screen and (max-width: 1024px) {
+    footer, header{
+        font-size: 20px;
+        margin: 1vw;
+   }
+   
+   #list a {
+       font-size: 18px;
+       height: 35px;
+       opacity: 0.1;
+   }
+
+   #imageNumber p{
+       font-size: 18px;
+   }
+
+   #dot {
+       width: 20px;
+   }
+
+   .images-column{
+       width: 12vw;
+       margin: 0 2.5vw;
+   }
+
+   #container {
+       width: 90vw;
+       margin: 5vh 5vw;
+       height: 90vh;
+       display: flex;
+       justify-content: center;
+       z-index: -1;
+   }
+
+   #focus {
+       height: 30vh;
+       display: flex;
+       align-items: center;
+       width: 30vw;
+   }
+
+   #focus img{
+       width: 100%;
+       height: auto;
+       cursor: pointer;
+   }
+
+   a:hover { 
+       color: white; }
+
+   #list a{
+       color: black;
+   }
+
+   #list {
+       mix-blend-mode: normal;
+   }
+}
+
+/* Mobile Media Query */
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    footer, header{
+        font-size: 20px;
+    }
+
+    #list a {
+        font-size: 18px;
+        height: 35px;
+        opacity: 0.1;
+    }
+
+    #imageNumber p{
+        font-size: 16px;
+        display: none;
+    }
+
+    #dot {
+        width: 20px;
+    }
+
+    .images-column{
+        width: 47.5vw;
+        margin: 0 2.5vw;
+    }
+
+    #container {
+        width: 99vw;
+        margin: 5vh 0.5vw;
+    }
+
+    #focus {
+        height: 50vh;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 95vw;
+    }
+
+    #focus img{
+        width: 70%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    a:hover { 
+        color: white; }
+
+    #list a{
+        color: black;
+    }
+
+    #list {
+        mix-blend-mode: normal;
+    }
+
+    #imageNumber{
+        mix-blend-mode: normal;
+    }
+
+    #imageNumber p{
+        color: black;
+    }
+}
